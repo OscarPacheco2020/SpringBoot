@@ -29,7 +29,7 @@ public class Persona {
 	@ManyToOne
 	@JoinColumn(name = "idPais")
 	private Pais pais;
-
+	
 	public Integer getIdPersona() {
 		return idPersona;
 	}
@@ -68,6 +68,12 @@ public class Persona {
 
 	public void setPais(Pais pais) {
 		this.pais = pais;
+	}
+
+	@Override
+	public String toString() {
+		return "Persona [idPersona=" + idPersona + ", nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad
+				+ ", pais=" + pais + "]";
 	}
 	
 }

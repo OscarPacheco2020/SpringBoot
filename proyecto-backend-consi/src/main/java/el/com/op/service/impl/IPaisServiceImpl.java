@@ -9,8 +9,6 @@ import el.com.op.model.Pais;
 import el.com.op.repository.IPaisRepository;
 import el.com.op.service.IPaisService;
 
-
-
 @Service
 public class IPaisServiceImpl implements IPaisService{
 
