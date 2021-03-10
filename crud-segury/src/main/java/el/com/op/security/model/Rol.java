@@ -1,5 +1,7 @@
 package el.com.op.security.model;
 
+
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
@@ -7,25 +9,21 @@ import el.com.op.security.enums.RolNombre;
 
 @Entity
 public class Rol {
-
-	@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idRol;
-	
     @NotNull
     @Enumerated(EnumType.STRING)
     private RolNombre rolNombre;
 
-	public Rol() {
-		
-	}
+    public Rol() {
+    }
 
-	public Rol(@NotNull RolNombre rolNombre) {
-		super();
-		this.rolNombre = rolNombre;
-	}
+    public Rol(@NotNull RolNombre rolNombre) {
+        this.rolNombre = rolNombre;
+    }
 
-	public int getIdRol() {
+    public int getIdRol() {
 		return idRol;
 	}
 
@@ -34,12 +32,10 @@ public class Rol {
 	}
 
 	public RolNombre getRolNombre() {
-		return rolNombre;
-	}
+        return rolNombre;
+    }
 
-	public void setRolNombre(RolNombre rolNombre) {
-		this.rolNombre = rolNombre;
-	}
-    
-    
+    public void setRolNombre(RolNombre rolNombre) {
+        this.rolNombre = rolNombre;
+    }
 }

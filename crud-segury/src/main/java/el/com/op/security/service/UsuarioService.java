@@ -13,10 +13,10 @@ import java.util.Optional;
 @Transactional
 public class UsuarioService {
 
-	@Autowired
+    @Autowired
     UsuarioRepository usuarioRepository;
-	
-	public Optional<Usuario> getByNombreUsuario(String nombreUsuario){
+
+    public Optional<Usuario> getByNombreUsuario(String nombreUsuario){
         return usuarioRepository.findByNombreUsuario(nombreUsuario);
     }
 
@@ -31,9 +31,4 @@ public class UsuarioService {
     public void save(Usuario usuario){
         usuarioRepository.save(usuario);
     }
-    
-    public void update(Usuario usuario) {
-    	usuarioRepository.save(usuario);
-    }
-	
 }

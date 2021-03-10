@@ -6,20 +6,15 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class NuevoUsuario {
-	
-	@NotBlank
+    @NotBlank
     private String nombre;
-    
-	@NotBlank
+    @NotBlank
     private String nombreUsuario;
-    
-	@Email
+    @Email
     private String email;
-    
-	@NotBlank
+    @NotBlank
     private String password;
-    
-	private Set<String> roles = new HashSet<>();
+    private Set<String> roles = new HashSet<>();
 
     public String getNombre() {
         return nombre;

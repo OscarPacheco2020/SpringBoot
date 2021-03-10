@@ -1,17 +1,16 @@
 package el.com.op.security.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import el.com.op.security.model.Usuario;
 
 import java.util.Optional;
 
-public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
-	
-	Optional<Usuario> findByNombreUsuario(String nombreUsuario);
-	
+@Repository
+public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
+    Optional<Usuario> findByNombreUsuario(String nombreUsuario);
     boolean existsByNombreUsuario(String nombreUsuario);
-    
     boolean existsByEmail(String email);
 
 }

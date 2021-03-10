@@ -1,5 +1,6 @@
 package el.com.op.security.jwt;
 
+import el.com.op.security.model.UsuarioPrincipal;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,14 +8,11 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
-import el.com.op.security.model.UsuarioPrincipal;
-
 import java.util.Date;
 
 @Component
 public class JwtProvider {
-
-	private final static Logger logger = LoggerFactory.getLogger(JwtProvider.class);
+    private final static Logger logger = LoggerFactory.getLogger(JwtProvider.class);
 
     @Value("${jwt.secret}")
     private String secret;
