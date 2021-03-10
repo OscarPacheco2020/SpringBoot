@@ -23,7 +23,7 @@ import el.com.op.service.ProductoService;
 
 @RestController
 @RequestMapping("/producto")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 public class ProductoController {
 
 	@Autowired
