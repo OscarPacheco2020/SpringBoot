@@ -1,5 +1,17 @@
 package el.com.op.security.repository;
 
-public interface UsuarioRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import el.com.op.security.model.Usuario;
+
+import java.util.Optional;
+
+public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
+	
+	Optional<Usuario> findByNombreUsuario(String nombreUsuario);
+	
+    boolean existsByNombreUsuario(String nombreUsuario);
+    
+    boolean existsByEmail(String email);
 
 }
