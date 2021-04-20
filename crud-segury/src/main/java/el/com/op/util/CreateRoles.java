@@ -44,7 +44,7 @@ public class CreateRoles implements CommandLineRunner{
         UsuarioAdmin.setRoles(roles);
 		usuarioService.save(UsuarioAdmin );
 		
-		Usuario UsuarioUsuario = new Usuario("usur", "usur", "usur@correo.com", passwordEncoder.encode("usur"));
+		Usuario UsuarioUsuario = new Usuario("user", "user", "usur@correo.com", passwordEncoder.encode("user"));
         Set<Rol> rolesUsuario = new HashSet<>();
         rolesUsuario.add(rolUser);
         UsuarioUsuario.setRoles(rolesUsuario);
