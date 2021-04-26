@@ -25,6 +25,7 @@ public class CreateDatosPruebas implements CommandLineRunner{
 
     @Override
     public void run(String... args) throws Exception {
+        /*
         Marca marca1 = new Marca();
         marca1.setNombre("BMW");
         marcaRepository.save(marca1);
@@ -191,5 +192,7 @@ public class CreateDatosPruebas implements CommandLineRunner{
         coche12.setVersion("728 I");
         coche12.setModelo(modeloCo6);
         cocheRepository.save(coche12);
+
+         */
     }
 }
